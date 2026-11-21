@@ -62,3 +62,33 @@ footer{justify-content:space-between;border-top:1px solid var(--line);padding-bl
 @media(max-width:760px){.hero-copy{padding-bottom:90px}.photo-switch{right:auto;left:var(--side);bottom:19px}.folios{grid-template-columns:1fr}.folio:nth-child(2){padding-top:0}.folio:nth-child(2) img{aspect-ratio:1.5}.lookbook .section-intro{gap:16px}.drawing{margin-top:18px}}
 
 .see-plan{display:none}@media(max-width:760px){.see-plan{display:inline-block;margin-top:12px}}
+
+/* Рабочая поверхность конструктора */
+.studio-planner{display:block}
+.studio-planner .brief-copy{display:grid;grid-template-columns:1.2fr 1fr;column-gap:7vw;align-items:end}
+.studio-planner .brief-copy .overline{grid-column:1/-1}
+.studio-planner .brief-copy h2{margin:0}
+.boards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.boards .drawing{margin:0;min-width:0;display:flex;flex-direction:column}
+.boards svg{width:100%;height:auto;display:block;flex:1}
+#drawing{touch-action:none;user-select:none}
+.volume svg{background:linear-gradient(#e9e6da,#f8f6ed)}
+.boards .drawing-head,.boards figcaption{background:#faf9f1}
+.plan-key{display:flex;gap:5px 16px;flex-wrap:wrap;margin:10px 0;font-size:.85rem;color:#435042}
+.module-controls{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,60px);margin:24px 0 36px}
+.studio-planner h3{font-size:clamp(20px,2vw,28px);margin:0 0 14px;font-weight:600}
+.palette{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.palette button,.tool-actions button{font-weight:550;font-size:.92rem;line-height:1.35;min-height:44px;padding:8px 12px;margin:0}
+.palette button{background:#faf9f1;border:1px solid #a6ab98;color:#304536;text-align:left}
+.palette button:hover{background:#e0e6d5}
+.inspector label{display:block;font-size:.89rem;margin-bottom:4px}
+.inspector input,.inspector select{width:100%;min-height:44px;border:1px solid #9a9b87;background:#fffcf5;border-radius:2px;padding:8px 10px;color:var(--ink)}
+.pos-fields{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;margin:8px 0}
+.tool-actions{display:flex;flex-wrap:wrap;gap:10px}
+.tool-actions button+button{background:transparent;color:var(--green);border:1px solid #9ca58f}
+.tool-actions :disabled{opacity:.5;cursor:default}
+#placement-info{font-size:.9rem;line-height:1.5;margin:8px 0 0}
+.studio-planner form{max-width:900px}
+@media(max-width:760px){.studio-planner .brief-copy,.module-controls{display:block}.studio-planner .brief-copy h2{margin-bottom:12px}.boards{grid-template-columns:1fr}.inspector{margin-top:22px}.palette{gap:6px}.boards figcaption{font-size:.8rem}}
+
+#row-origin{display:block;color:#455343;margin-bottom:10px}

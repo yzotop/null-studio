@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f3e9"><title>Слой — кухни из массива на заказ</title><link rel="stylesheet" href="style.css?v=2"><script defer src="brief.js?v=2"></script></head>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f3e9"><title>Слой — кухни из массива на заказ</title><link rel="stylesheet" href="style.css?v=3"><script defer src="planner.js?v=3"></script><script defer src="brief.js?v=3"></script></head>
 <body><a class="skip" href="#main">К содержанию</a>
 <header><a class="mark" href="#main" aria-label="Слой, главная">слой<span>.</span></a><span class="mast-label">Мебельная мастерская</span><nav aria-label="Разделы сайта"><a href="#fronts">Фасады</a><a href="#project">Коллекции</a></nav><a class="mast-action" href="#brief">Собрать задание <span aria-hidden="true">↗</span></a></header>
 <main id="main"><section class="hero" aria-labelledby="hero-title"><img src="assets/kitchen.webp" alt="Кухня с дубовым островом, оливковым шкафом и открытой полкой" width="1536" height="1024" fetchpriority="high">
@@ -23,17 +23,24 @@
 <label><input type="radio" name="front" value="Светлый ясень"><span class="sample ash"></span><span class="swatch-title">Светлый ясень</span><span class="desc">Светлая основа, плавный рисунок</span></label>
 <label><input type="radio" name="front" value="Оливковый дуб"><span class="sample olive"></span><span class="swatch-title">Оливковый дуб</span><span class="desc">Матовая эмаль с видимой текстурой</span></label>
 </fieldset></section>
-<section id="brief" class="brief"><div class="brief-copy"><p class="overline">Конструктор задания</p><h2>Ваша кухня в плане</h2><p>Введите размеры стен, выберите технику и сохраните лист для мастера. В нём останутся эскиз сверху и ваши пожелания.</p>
-<figure class="drawing" id="sketch"><div class="drawing-head"><span>Эскиз кухни</span><span>Вид сверху</span></div>
-<svg id="drawing" viewBox="0 0 460 246" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема выбранной планировки"></svg><figcaption id="plan-caption">Введите длину основной стены.</figcaption></figure></div>
-<form id="kitchen-form"><p id="origin" hidden></p><p class="picked">Фасад <strong id="picked">Натуральный дуб</strong> <a href="#fronts">Изменить</a></p>
+<section id="brief" class="brief studio-planner"><div class="brief-copy"><p class="overline">Кухонная мастерская</p><h2>Расставьте свою кухню</h2><p>Добавьте шкафы и технику. Перетаскивайте их вдоль стены или на остров. Объёмный вид покажет результат в выбранном фасаде. <a href="#kitchen-form">Изменить размеры кухни</a></p></div>
+<div id="sketch" class="boards">
+<figure class="drawing"><div class="drawing-head"><strong>Расстановка</strong><span>Вид сверху</span></div><svg id="drawing" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Интерактивная расстановка кухонных модулей"></svg><figcaption id="plan-caption"></figcaption></figure>
+<figure class="drawing volume"><div class="drawing-head"><strong>Как выглядит кухня</strong><span>Аксонометрия</span></div><svg id="volume" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Объёмный вид вашей расстановки"></svg><figcaption>Высокие шкафы и нижние секции показаны в одном масштабе.</figcaption></figure></div>
+<div class="plan-key" id="plan-key" aria-label="Номера на плане"></div>
+<div class="module-controls"><div><h3>Мебель и техника</h3><div class="palette" id="palette"></div></div>
+<div class="inspector"><h3>Положение модуля</h3><label for="module-list">Модуль на плане</label><select id="module-list"></select>
+<div class="pos-fields"><label>Ряд<select id="rail"></select></label><label>От начала ряда, см<input id="offset" type="number" min="0" step="1" inputmode="numeric"></label></div>
+<small id="row-origin"></small><div class="tool-actions"><button type="button" id="place">Поставить сюда</button><button type="button" id="remove">Убрать модуль</button></div>
+<p id="placement-info" role="status"></p></div></div>
+<form id="kitchen-form"><h3>Размеры и задание мастеру</h3><p id="origin" hidden></p><p class="picked">Фасад <strong id="picked">Натуральный дуб</strong> <a href="#fronts">Изменить</a></p>
 <label for="layout">Планировка</label><select id="layout"><option value="straight">Прямая</option><option value="corner">Угловая</option><option value="island">Прямая с островом</option></select>
-<label for="length">Длина основной стены, см</label><input id="length" type="number" inputmode="numeric" required min="1" max="9999" step="1" placeholder="Например, 360">
+<label for="length">Длина основной стены, см</label><input id="length" type="number" inputmode="numeric" required min="1" max="9999" step="1" value="360" placeholder="Например, 360">
 <div id="extra-field" hidden><label for="extra" id="extra-label">Длина второй стены, см</label><input type="number" id="extra" min="1" max="9999" step="1" inputmode="numeric"></div>
-<fieldset class="equipment"><legend>Какую технику встроить?</legend>
+<fieldset class="equipment"><legend>Техника в задании</legend>
 <label><input type="checkbox" name="equipment" value="Духовой шкаф">Духовой шкаф</label>
 <label><input type="checkbox" name="equipment" value="Посудомоечная машина">Посудомоечная машина</label>
 <label><input type="checkbox" name="equipment" value="Холодильник">Холодильник</label></fieldset>
 <label for="notes">Что ещё учесть? <small>По желанию</small></label><textarea id="notes" maxlength="1500" rows="2" placeholder="Например, оставить место для кофемашины"></textarea>
-<a class="see-plan" href="#sketch">Посмотреть эскиз ↑</a><div class="exports"><button type="submit" value="sheet">Сохранить эскиз и задание ↓</button><button type="submit" class="text-export" value="text">Скачать задание в TXT</button></div><small>Лист с эскизом открывается в браузере и подходит для печати. Эскиз показывает форму кухни. Расположение техники и размеры для изготовления мастер уточнит на замере.</small><p id="status" role="status"></p></form></section></main>
+<a class="see-plan" href="#sketch">Посмотреть эскиз ↑</a><div class="exports"><button type="submit" value="sheet">Сохранить эскиз и задание ↓</button><button type="submit" class="text-export" value="text">Скачать задание в TXT</button></div><small>Лист с эскизом открывается в браузере и подходит для печати. В лист войдут оба вида и позиции модулей. Расположение техники и размеры для изготовления мастер уточнит на замере.</small><p id="status" role="status"></p></form></section></main>
 <footer><a class="mark" href="#main">слой<span>.</span></a><p>Концепт мебельной мастерской от <a href="https://yzotop.github.io/null-studio/#sloy">студии null</a>.<br>Интерьеры и образцы фасадов — визуализации.</p></footer></body></html>

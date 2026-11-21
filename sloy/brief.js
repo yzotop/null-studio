@@ -34,55 +34,11 @@ for (const article of collections.values()) {
     extra.value = settings.return;
     byId('origin').textContent = 'За основу взят проект «' + reference + '». Размеры примера можно изменить.';
     byId('origin').hidden = false;
+    kitchenPlanner.applyCollection(article.dataset.project);
     update();
   });
 }
 
-function drawElement(tag, attributes, content) {
-  const el = document.createElementNS(drawing.namespaceURI, tag);
-  for (const [key, value] of Object.entries(attributes)) el.setAttribute(key, value);
-  if (content) el.textContent = content;
-  drawing.append(el);
-}
-function sketch() {
-  drawing.replaceChildren();
-  const main = wall.valueAsNumber;
-  const second = extra.disabled ? 0 : extra.valueAsNumber;
-  const caption = byId('plan-caption');
-  if (!wall.validity.valid || (!extra.disabled && !extra.validity.valid)) {
-    caption.textContent = 'Для эскиза заполните размеры выбранной планировки.';
-    drawElement('text', {x:230,y:128,'text-anchor':'middle',fill:'#4a5244','font-size':15}, 'Здесь появится ваша планировка');
-    return;
-  }
-  const corner = layout.value === 'corner';
-  const island = layout.value === 'island';
-  const scale = Math.min(310 / Math.max(main, island ? second : 0), corner ? 143 / second : Infinity);
-  const width = main * scale;
-  const side = second * scale;
-  const depth = Math.min(28, width * 0.4, corner ? side * 0.4 : 28);
-  const left = (460 - Math.max(width, island ? side : 0)) / 2;
-  const top = corner ? 53 : island ? 63 : 108;
-  const fill = {'Натуральный дуб':'#c6a273','Светлый ясень':'#decdad','Оливковый дуб':'#758065'}[byId('picked').textContent];
-  const shape = {fill,stroke:'#354033','stroke-width':1.4};
-  drawElement('path', {...shape,d:corner
-    ? `M${left} ${top}h${width}v${depth}H${left+depth}V${top+side}H${left}Z`
-    : `M${left} ${top}h${width}v${depth}h-${width}Z`});
-  function dimension(x,y,length,label) {
-    drawElement('path',{d:`M${x} ${y}h${length} M${x} ${y-3}v6 M${x+length} ${y-3}v6`,fill:'none',stroke:'#586451'});
-    drawElement('text',{x:x+length/2,y:y-7,'text-anchor':'middle',fill:'#263421','font-size':15},label);
-  }
-  dimension(left,top-7,width,main+' см');
-  if (corner) {
-    drawElement('path',{d:`M${left-7} ${top}v${side} m-3 0h6 M${left-10} ${top}h6`,stroke:'#586451',fill:'none'});
-    drawElement('text',{x:left-12,y:top+side/2+5,'text-anchor':'end',fill:'#263421','font-size':14},second+' см');
-  }
-  if (island) {
-    const islandX = left + (Math.max(width,side)-side)/2;
-    drawElement('rect',{...shape,x:islandX,y:top+85,width:side,height:Math.min(35,side/2)});
-    dimension(islandX,top+78,side,second+' см');
-  }
-  caption.textContent = layout.selectedOptions[0].text + ' · ' + byId('picked').textContent;
-}
 function update() {
   byId('picked').textContent = document.querySelector('input[name="front"]:checked').value;
   byId('extra-field').hidden = layout.value === 'straight';
@@ -90,7 +46,7 @@ function update() {
   extra.required = !extra.disabled;
   extraLabel.textContent = layout.value === 'corner' ? 'Длина второй стены, см' : 'Длина острова, см';
   statusMessage.textContent = '';
-  sketch();
+  kitchenPlanner.render();
 }
 document.querySelectorAll('input[name="front"]').forEach(radio => radio.addEventListener('change', update));
 layout.addEventListener('change', () => { extra.value = ''; update(); });
@@ -113,7 +69,7 @@ function printableSheet(lines) {
   doc.head.append(style);
   const title = doc.createElement('h1');
   title.textContent = 'Слой / Задание на кухню';
-  doc.body.append(title, drawing.cloneNode(true));
+  doc.body.append(title, drawing.cloneNode(true), byId('volume').cloneNode(true));
   for (const line of [...lines, 'Эскиз для обсуждения. Размеры для изготовления мастер уточнит на замере.']) {
     const p = doc.createElement('p');
     p.textContent = line;
@@ -129,7 +85,8 @@ form.addEventListener('submit', event => {
     'Основная стена — ' + wall.value + ' см');
   if (!extra.disabled) lines.push(extraLabel.textContent.replace(', см', '') + ' — ' + extra.value + ' см');
   const equipment = Array.from(form.querySelectorAll('[name="equipment"]:checked'), item => item.value);
-  if (equipment.length) lines.push('Встроенная техника — ' + equipment.join(', '));
+  if (equipment.length) lines.push('Техника в задании — ' + equipment.join(', '));
+  lines.push(...kitchenPlanner.describe());
   const notes = byId('notes').value.trim();
   if (notes) lines.push('Пожелания — ' + notes);
   const textOnly = event.submitter?.value === 'text';

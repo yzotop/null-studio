@@ -126,3 +126,10 @@ summary { cursor: pointer; font-weight: 650; color: var(--study-ink); padding: .
   td, th { padding: .48rem; }
   .study main > header { padding-inline: 1.15rem; }
 }
+
+.purchase-sample { background: var(--lilac); color: var(--blue-dark); }
+.purchase-sample dl > div { border-color: #bdbddc; }
+.study blockquote { margin: 1.25rem 0; padding-left: 1rem; border-left: .24rem solid currentColor; }
+#budget { width: 11rem; max-width: 100%; padding: .6rem; background: white; border: 1px solid #898995; border-radius: .35rem; font: inherit; }
+#budget:focus-visible { outline: 3px solid #d75c1c; outline-offset: 3px; }
+#budget-error { color: #903311; }

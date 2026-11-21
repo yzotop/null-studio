@@ -1,0 +1,37 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Заказ поставщику на миллион рублей для интернет-магазина подарков · null</title><meta name="description" content="Сравните два заказа на 30 товаров, поменяйте бюджет и проверьте выдачу по 345 чекам."><link rel="stylesheet" href="style.css?v=4"></head><body class="study study-goods"><nav aria-label="Основное меню"><a class="brand" href="index.html" aria-label="Студия null, главная">null<span>аналитическая студия</span></a><div><a href="index.html#cases">Работы</a><a href="#calculator">Ведомость</a><a href="#contact">Контакт</a></div></nav><main><header><small>Демонстрационный проект по собирательному брифу</small>
+<h1>Заказ поставщику на миллион рублей для интернет-магазина подарков</h1>
+<blockquote><p>К понедельнику нужно заказать 30 товаров на миллион. Красную и розовую сумки часто берут вместе. Если выкупить обе расцветки полностью, что придётся сократить? Нужна таблица, в которой я могу поменять бюджет и пересчитать заказ.</p></blockquote>
+<p>Я Александр Давыдов, аналитик студии null. Для этого примера я сравнил две ведомости на 4 апреля 2011 года и проверил их на покупках следующих двух недель. Чеки взяты из открытых данных британского магазина. Рублёвые закупочные цены, бюджет, остатки и поставки заданы для симуляции.</p><p class="jump"><a href="#calculator">Поменять бюджет в ведомости</a></p></header>
+<section><h2>Две ведомости при одном лимите</h2>
+<p>Полная заявка по 30 артикулам стоит 1 605 042 ₽. При лимите в миллион закупщик может пропорционально сократить всю заявку. Второй вариант — сначала выделить деньги на обе расцветки сумок, а оставшуюся часть бюджета распределить между другими товарами.</p>
+<div class="scroll" tabindex="0"><table><thead><tr><th scope="col">Строка ведомости</th><th scope="col">Общее сокращение</th><th scope="col">Приоритет сумок</th><th scope="col">Изменение</th></tr></thead><tbody><tr><td>Красная сумка в горох, шт.</td><td>775</td><td>1 244</td><td>+469</td></tr><tr><td>Розовая сумка в горох, шт.</td><td>316</td><td>507</td><td>+191</td></tr><tr><td>Шёлковый веер, шт.</td><td>1 132</td><td>965</td><td>−167</td></tr><tr><td><strong>Сумма заказа по всем 30 артикулам</strong></td><td><strong>999 982 ₽</strong></td><td><strong>999 989 ₽</strong></td><td><strong>+7 ₽</strong></td></tr></tbody></table></div>
+<p>Обе сумки стоят по 180 ₽ в закупке. Дополнительные 660 сумок забирают 118 800 ₽. Больше всего денег высвобождает сокращение вееров. Убрав 167 штук по 125 ₽, закупщик освобождает 20 875 ₽. Для покупки сумок приходится также сократить другие позиции, в том числе подсвечники.</p>
+</section><section><h2>Что получил бы покупатель</h2>
+<p>Я взял одни и те же 345 чеков за 4–17 апреля и проиграл их по порядку с каждым заказом. Модельная поставка приходит 11 апреля. Корзина считается полной, когда удалось выдать всё запрошенное количество по всем товарам из выбранных 30 артикулов, которые встретились в чеке.</p>
+<div class="scroll" tabindex="0"><table><thead><tr><th scope="col">Проверка по чекам</th><th scope="col">Общее сокращение</th><th scope="col">Приоритет сумок</th></tr></thead><tbody><tr><td>Полностью собранные корзины</td><td><strong>245 из 345</strong></td><td><strong>220 из 345</strong></td></tr><tr><td>Совместные покупки, где обеих сумок хватило в нужном количестве</td><td><strong>23 из 23</strong></td><td><strong>23 из 23</strong></td></tr></tbody></table></div>
+<p>Если закупщику важно собирать корзины целиком, для этой заявки я бы выбрал общее сокращение. На проверенных чеках оно дало <strong>на 25 полных корзин больше</strong>. Дополнительная закупка сумок ни разу не понадобилась, чтобы доукомплектовать пару. Для следующего заказа сравнение стоит повторить на свежих остатках и продажах.</p>
+</section><section id="calculator"><h2>Пересчитать свой вариант заказа</h2>
+<p>Измените лимит и выберите правило. Суммы, сокращения по 30 артикулам и выдача по тем же 345 чекам пересчитаются в браузере.</p>
+<noscript><p>Для пересчёта включите JavaScript. В таблицах выше приведены оба варианта при лимите в миллион рублей.</p></noscript>
+<div class="actions"><label>Бюджет, ₽ <input id="budget" inputmode="decimal" type="text" value="1 000 000" aria-describedby="budget-error"></label>
+<label>Правило <select id="policy"><option value="proportional">Общее сокращение</option><option value="bags">Приоритет сумок</option></select></label></div>
+<p id="budget-error" role="status" hidden>Введите сумму от 0 до 45 585 200 ₽ с точностью до копейки.</p>
+<div id="order-result"><p class="formula" id="order-summary" aria-live="polite"></p><p id="basket-count"></p>
+<details><summary>Открыть все 30 строк заказа</summary><div class="scroll" tabindex="0"><table><thead><tr>
+<th>Товар</th><th>Артикул</th><th>Единица</th><th>Цена</th><th>Заявка</th><th>Заказать</th><th>Сокращение</th><th>Сумма</th>
+</tr></thead><tbody id="order-lines"></tbody></table></div></details>
+<details><summary id="explanation-title">Пояснение к заказу</summary><p id="explanation"></p><small id="explanation-source"></small></details></div>
+<p><a href="replenishment/replay.json" download>Скачать расчёт для лимита 1 млн ₽ · JSON</a></p></section>
+<section id="contact" class="order"><h2>Что получит закупщик на своих данных</h2>
+<p>Для пилота возьмём одну группу товаров. Понадобятся продажи по артикулам, остатки на дату заказа, товары в пути и закупочные цены. Чтобы проверить совместные покупки, нужен также состав чеков. Я согласую с закупщиком сроки поставки и кратность упаковки, затем соберу повторяемую таблицу заказа в Excel или Google Sheets.</p>
+<p><strong>Приёмка проходит за рабочим столом закупщика.</strong> Он сам меняет лимит, получает новые количества по артикулам, видит, какие позиции пришлось сократить, и сверяет итоговую сумму с бюджетом. AI поясняет конкретные строки ведомости. По строке вееров он покажет, сколько денег освободило сокращение и как проверить эту сумму. Правило закупки выбирает закупщик.</p>
+<p>Миллион рублей в примере — деньги на товары. Ранее предложенный ориентир стоимости самого пилота — <strong>60 000 ₽</strong>. Объём и цену можно уточнить по примеру вашей ведомости.</p>
+<a class="button" href="https://t.me/Datalake">Обсудить пилот с Александром</a></section>
+<footer>Источник покупок — Daqing Chen, <a href="https://doi.org/10.24432/C5CG6D">Online Retail II, UCI</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. В примере использованы количества по выбранным 30 артикулам. Закупочные цены в рублях и движение запасов смоделированы.</footer>
+<script defer src="replenishment/order.js"></script>
+<script defer src="replenishment/client-prices.js"></script>
+<script defer src="replenishment/client-examples.js"></script>
+<script defer src="replenishment/basket-input.js"></script>
+<script defer src="replenishment/basket-replay.js"></script>
+<script defer src="replenishment/worksheet.js"></script>
+</main><script>document.querySelectorAll('select').forEach(s=>s.addEventListener('change',()=>{s.closest('section').querySelectorAll('[data-panel]').forEach(e=>e.hidden=e.dataset.panel!==s.value)}));</script></body></html>

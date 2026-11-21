@@ -1,0 +1,51 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Аналитическая студия Александра Давыдова · null</title><meta name="description" content="Аналитическая студия Александра Давыдова. Разбор экономики товаров, сверка обращений с CRM и два примера с исходными данными."><link rel="stylesheet" href="style.css"></head><body><nav aria-label="Основное меню"><a class="brand" href="index.html" aria-label="Студия null, главная">null<span>аналитическая студия</span></a><div><a href="#cases">Работы</a><a href="#approach">Подход</a><a href="#contact">Контакт</a></div></nav><main><header class="studio-intro">
+  <h1>Аналитика для закупок и продаж</h1>
+  <div class="studio-lead">
+    <p>Я Александр Давыдов, аналитик студии null. Помогаю продавцам разобраться в экономике товаров, а руководителям продаж — проследить путь обращения до сделки.</p>
+    <div class="actions"><a class="button" href="#contact">Обсудить задачу</a><a href="#cases">Посмотреть работы</a></div>
+  </div>
+</header>
+
+<section id="cases" class="portfolio">
+  <header class="section-head"><h2>Два примера работы</h2><p>Модельные данные за октябрь 2026 года. В каждом разборе можно открыть исходные строки и повторить расчёт.</p></header>
+  <div class="portfolio-grid">
+    <article>
+      <p class="case-domain">Wildberries</p>
+      <h3><a href="wildberries.html">Какой товар проверить перед поставкой?</a></h3>
+      <figure class="sample goods">
+        <figcaption>Рюкзак «Город»</figcaption>
+        <dl><div><dt>Выручка после возвратов</dt><dd>46 700 ₽</dd></div>
+        <div><dt>После удержаний, доставки и себестоимости</dt><dd>−6 377,30 ₽</dd></div></dl>
+      </figure>
+      <p>Рюкзак лидирует по выручке, но покупатели вернули его девять раз. У сумки выручка ниже, а результат за месяц положительный. Сравните три товара и разберите один возврат по операциям.</p>
+      <a class="case-link" href="wildberries.html">Разобрать экономику товара</a>
+    </article>
+    <article>
+      <p class="case-domain">Сайт, телефония и CRM</p>
+      <h3><a href="funnel.html">Какие обращения обсудить на планёрке?</a></h3>
+      <figure class="sample calls">
+        <figcaption>Входящий звонок № 476577894</figcaption>
+        <dl><div><dt>Длительность разговора</dt><dd>5 мин 43 с</dd></div>
+        <div><dt>Связанная сделка в выгрузке CRM</dt><dd>Не найдена</dd></div></dl>
+      </figure>
+      <p>У 12 обращений есть номер заявки или звонка, по которому менеджер может проверить итог. Ещё по четырём пропущенным вызовам стоит уточнить, перезвонили ли клиенту.</p>
+      <a class="case-link" href="funnel.html">Открыть список обращений</a>
+    </article>
+  </div>
+</section>
+
+<section id="approach" class="approach">
+  <h2>Как проходит разбор</h2>
+  <ol>
+    <li><h3>Начнём с решения</h3><p>Обсудим, кто пользуется отчётом и какой выбор ему предстоит. Вы покажете пример выгрузки. Я предложу состав работы и критерий проверки.</p></li>
+    <li><h3>Сверим один пример</h3><p>Возьмём знакомый вам товар или звонок и вместе пройдём от исходной строки до результата. Так согласуем, какие расходы учитывать или какие контакты объединять в одну сделку.</p></li>
+    <li><h3>Разберём весь период</h3><p>Вы получите расчёт по товарам или список обращений для менеджеров. Покажу спорные строки и объясню, как повторить проверку на следующей выгрузке.</p></li>
+  </ol>
+</section>
+
+<section id="contact" class="studio-contact">
+  <h2>С каким отчётом помочь?</h2>
+  <div><p>Напишите, какое решение вам предстоит и где сейчас хранятся данные. Для первого разговора достаточно описания задачи.</p>
+  <a class="button" href="https://t.me/Datalake">Написать Александру в Telegram</a></div>
+</section>
+</main><script>document.querySelectorAll('select').forEach(s=>s.addEventListener('change',()=>{s.closest('section').querySelectorAll('[data-panel]').forEach(e=>e.hidden=e.dataset.panel!==s.value)}));</script></body></html>

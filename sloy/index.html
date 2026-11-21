@@ -15,9 +15,9 @@
 <div class="folio-copy"><p class="overline">Кухня с островом</p><h3>Тихий дом</h3><p>Запасы убрали в высокий шкаф. Стену над мойкой оставили открытой, а на острове один человек может раскатывать тесто, пока другой режет овощи.</p><a class="use-project" href="#brief">Взять «Тихий дом» за основу ↗</a></div></article>
 <article class="folio" data-project="city" data-layout="corner" data-finish="Светлый ясень" data-wall="280" data-return="190">
 <img src="assets/city.webp" loading="lazy" width="1536" height="1024" alt="Угловая кухня из светлого ясеня со стальной столешницей и мойкой у окна">
-<div class="folio-copy"><p class="overline">Угловая кухня</p><h3>Городское утро</h3><p>Мойка переехала к окну, плита заняла короткую стену. Стальная столешница связывает обе стороны угла. Часто используемая посуда стоит за рифлёным стеклом.</p><a class="use-project" href="#brief">Взять «Городское утро» за основу ↗</a></div></article>
+<div class="folio-copy"><p class="overline">Угловая кухня</p><h3>Городское утро</h3><p>Мойка переехала к окну, плита заняла короткую стену. Стальная столешница связывает обе стороны угла. Посуда на каждый день стоит за рифлёным стеклом.</p><a class="use-project" href="#brief">Взять «Городское утро» за основу ↗</a></div></article>
 </div></section>
-<section id="fronts" class="materials"><div class="section-intro"><div><p class="overline">Материалы</p><h2>Три характера дерева</h2></div><p>Одна форма фасада меняется от породы и отделки. Выберите образец для своей кухни.</p></div>
+<section id="fronts" class="materials"><div class="section-intro"><div><p class="overline">Материалы</p><h2>Три характера дерева</h2></div><p>Выберите отделку. В конструкторе шкафы сразу примут цвет выбранного образца.</p></div>
 <fieldset class="swatches"><legend class="sr">Фасад для вашего проекта</legend>
 <label><input type="radio" name="front" value="Натуральный дуб" checked><span class="sample oak"></span><span class="swatch-title">Натуральный дуб</span><span class="desc">Тёплый тон, крупные волокна</span></label>
 <label><input type="radio" name="front" value="Светлый ясень"><span class="sample ash"></span><span class="swatch-title">Светлый ясень</span><span class="desc">Светлая основа, плавный рисунок</span></label>
@@ -26,10 +26,10 @@
 <section id="brief" class="brief studio-planner"><div class="brief-copy"><p class="overline">Кухонная мастерская</p><h2>Расставьте свою кухню</h2><p>Добавьте шкафы и технику. Перетаскивайте их вдоль стены или на остров. Объёмный вид покажет результат в выбранном фасаде. <a href="#kitchen-form">Изменить размеры кухни</a></p></div>
 <div id="sketch" class="boards">
 <figure class="drawing"><div class="drawing-head"><strong>Расстановка</strong><span>Вид сверху</span></div><svg id="drawing" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Интерактивная расстановка кухонных модулей"></svg><figcaption id="plan-caption"></figcaption></figure>
-<figure class="drawing volume"><div class="drawing-head"><strong>Как выглядит кухня</strong><span>Аксонометрия</span></div><svg id="volume" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Объёмный вид вашей расстановки"></svg><figcaption>Высокие шкафы и нижние секции показаны в одном масштабе.</figcaption></figure></div>
+<figure class="drawing volume"><div class="drawing-head"><strong>Как выглядит кухня</strong><span>Вид в объёме</span></div><svg id="volume" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Объёмный вид вашей расстановки"></svg><figcaption>Высокие шкафы и нижние секции показаны в одном масштабе.</figcaption></figure></div>
 <div class="plan-key" id="plan-key" aria-label="Номера на плане"></div>
 <div class="module-controls"><div><h3>Мебель и техника</h3><div class="palette" id="palette"></div></div>
-<div class="inspector"><h3>Положение модуля</h3><label for="module-list">Модуль на плане</label><select id="module-list"></select>
+<div class="inspector"><h3>Куда поставить шкаф или технику</h3><label for="module-list">Модуль на плане</label><select id="module-list"></select>
 <div class="pos-fields"><label>Ряд<select id="rail"></select></label><label>От начала ряда, см<input id="offset" type="number" min="0" step="1" inputmode="numeric"></label></div>
 <small id="row-origin"></small><div class="tool-actions"><button type="button" id="place">Поставить сюда</button><button type="button" id="remove">Убрать модуль</button></div>
 <p id="placement-info" role="status"></p></div></div>
@@ -42,5 +42,5 @@
 <label><input type="checkbox" name="equipment" value="Посудомоечная машина">Посудомоечная машина</label>
 <label><input type="checkbox" name="equipment" value="Холодильник">Холодильник</label></fieldset>
 <label for="notes">Что ещё учесть? <small>По желанию</small></label><textarea id="notes" maxlength="1500" rows="2" placeholder="Например, оставить место для кофемашины"></textarea>
-<a class="see-plan" href="#sketch">Посмотреть эскиз ↑</a><div class="exports"><button type="submit" value="sheet">Сохранить эскиз и задание ↓</button><button type="submit" class="text-export" value="text">Скачать задание в TXT</button></div><small>Лист с эскизом открывается в браузере и подходит для печати. В лист войдут оба вида и позиции модулей. Расположение техники и размеры для изготовления мастер уточнит на замере.</small><p id="status" role="status"></p></form></section></main>
-<footer><a class="mark" href="#main">слой<span>.</span></a><p>Концепт мебельной мастерской от <a href="https://yzotop.github.io/null-studio/#sloy">студии null</a>.<br>Интерьеры и образцы фасадов — визуализации.</p></footer></body></html>
+<a class="see-plan" href="#sketch">Посмотреть эскиз ↑</a><div class="exports"><button type="submit" value="sheet">Сохранить эскиз и задание ↓</button><button type="submit" class="text-export" value="text">Скачать задание в TXT</button></div><small>Лист с эскизом открывается в браузере и подходит для печати. В нём будут план сверху, объёмный вид и список шкафов с размерами. Расположение техники и размеры для изготовления мастер уточнит на замере.</small><p id="status" role="status"></p></form></section></main>
+<footer><a class="mark" href="#main">слой<span>.</span></a><p>Сайт придуман и сделан в <a href="https://yzotop.github.io/null-studio/#sloy">студии null</a>.<br>Интерьеры и образцы фасадов — визуализации.</p></footer></body></html>

@@ -22,8 +22,8 @@
     const replay = replayOrder(basketInput, selected);
     summary.textContent = 'Сумма заказа — ' + rubles(selected.spend) +
       '. Остаток бюджета — ' + rubles(cents - selected.spend) + '.';
-    byId('basket-count').textContent = 'Полностью собраны ' + replay.complete + ' из ' +
-      replay.baskets.length + ' корзин. Обеих расцветок хватило в ' + replay.pairFull +
+    byId('basket-count').textContent = 'По чекам хватило товара на ' + replay.complete + ' из ' +
+      replay.baskets.length + ' корзин целиком. Обеих расцветок хватило в ' + replay.pairFull +
       ' из ' + replay.pairCount + ' совместных покупок.';
     body.replaceChildren(...selected.rows.map(row => {
       const tr = document.createElement('tr');
@@ -33,7 +33,7 @@
       return tr;
     }));
     const saved = clientExamples[policy.value + '/' + cents];
-    byId('explanation-title').textContent = saved ? 'Пояснение AI для этого заказа' : 'Пояснение по строкам расчёта';
+    byId('explanation-title').textContent = saved ? 'Пояснение AI для этого заказа' : 'Почему изменилось количество товаров';
     explanation.textContent = saved ? [saved.budget, saved.red, saved.pink, saved.tradeoff].join(' ') :
       clientOrder.tradeoff(comparison, policy.value)[0];
     byId('explanation-source').textContent = saved ? 'Сохранённый ответ Qwen, сверенный с этой ведомостью.' :

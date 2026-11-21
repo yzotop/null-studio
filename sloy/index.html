@@ -1,21 +1,39 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f3e9"><title>Слой — кухни из массива на заказ</title><link rel="stylesheet" href="style.css"><script defer src="brief.js"></script></head>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f3e9"><title>Слой — кухни из массива на заказ</title><link rel="stylesheet" href="style.css?v=2"><script defer src="brief.js?v=2"></script></head>
 <body><a class="skip" href="#main">К содержанию</a>
-<header><a class="mark" href="#main" aria-label="Слой, главная">слой<span>.</span></a><span class="mast-label">Мебельная мастерская</span><nav aria-label="Разделы сайта"><a href="#fronts">Фасады</a><a href="#project">Проект кухни</a></nav><a class="mast-action" href="#brief">Собрать задание <span aria-hidden="true">↗</span></a></header>
+<header><a class="mark" href="#main" aria-label="Слой, главная">слой<span>.</span></a><span class="mast-label">Мебельная мастерская</span><nav aria-label="Разделы сайта"><a href="#fronts">Фасады</a><a href="#project">Коллекции</a></nav><a class="mast-action" href="#brief">Собрать задание <span aria-hidden="true">↗</span></a></header>
 <main id="main"><section class="hero" aria-labelledby="hero-title"><img src="assets/kitchen.webp" alt="Кухня с дубовым островом, оливковым шкафом и открытой полкой" width="1536" height="1024" fetchpriority="high">
-<div class="hero-copy"><p class="hero-credit">Коллекция «Тихий дом»</p><h1 id="hero-title">Кухни<br>из массива</h1><a class="hero-link" href="#fronts">Выбрать фасады <span aria-hidden="true">↓</span></a></div><div class="photo-caption">Натуральный дуб и олива</div></section>
+<div class="hero-copy"><p class="hero-credit">Столярная коллекция</p><h1 id="hero-title">Кухни<br>из массива</h1>
+<a class="hero-link" href="#project">Смотреть коллекции <span aria-hidden="true">↓</span></a></div>
+<div class="photo-switch" role="group" aria-label="Интерьер на обложке">
+<button type="button" data-view="country" aria-pressed="true">Тихий дом</button>
+<button type="button" data-view="city" aria-pressed="false">Городское утро</button></div></section>
+<section id="project" class="lookbook"><div class="section-intro"><div><p class="overline">Коллекции</p><h2>Две кухни в деталях</h2></div><p>Для дома, где готовят вдвоём, и квартиры, в которой важен каждый метр. Возьмите одну за основу и примерьте к своей комнате.</p></div>
+<div class="folios">
+<article class="folio" data-project="country" data-layout="island" data-finish="Натуральный дуб" data-wall="420" data-return="180">
+<img src="assets/kitchen.webp" loading="lazy" width="1536" height="1024" alt="Длинная дубовая кухня с островом и высоким оливковым шкафом">
+<div class="folio-copy"><p class="overline">Кухня с островом</p><h3>Тихий дом</h3><p>Запасы убрали в высокий шкаф. Стену над мойкой оставили открытой, а на острове один человек может раскатывать тесто, пока другой режет овощи.</p><a class="use-project" href="#brief">Взять «Тихий дом» за основу ↗</a></div></article>
+<article class="folio" data-project="city" data-layout="corner" data-finish="Светлый ясень" data-wall="280" data-return="190">
+<img src="assets/city.webp" loading="lazy" width="1536" height="1024" alt="Угловая кухня из светлого ясеня со стальной столешницей и мойкой у окна">
+<div class="folio-copy"><p class="overline">Угловая кухня</p><h3>Городское утро</h3><p>Мойка переехала к окну, плита заняла короткую стену. Стальная столешница связывает обе стороны угла. Часто используемая посуда стоит за рифлёным стеклом.</p><a class="use-project" href="#brief">Взять «Городское утро» за основу ↗</a></div></article>
+</div></section>
 <section id="fronts" class="materials"><div class="section-intro"><div><p class="overline">Материалы</p><h2>Три характера дерева</h2></div><p>Одна форма фасада меняется от породы и отделки. Выберите образец для своей кухни.</p></div>
 <fieldset class="swatches"><legend class="sr">Фасад для вашего проекта</legend>
 <label><input type="radio" name="front" value="Натуральный дуб" checked><span class="sample oak"></span><span class="swatch-title">Натуральный дуб</span><span class="desc">Тёплый тон, крупные волокна</span></label>
 <label><input type="radio" name="front" value="Светлый ясень"><span class="sample ash"></span><span class="swatch-title">Светлый ясень</span><span class="desc">Светлая основа, плавный рисунок</span></label>
 <label><input type="radio" name="front" value="Оливковый дуб"><span class="sample olive"></span><span class="swatch-title">Оливковый дуб</span><span class="desc">Матовая эмаль с видимой текстурой</span></label>
 </fieldset></section>
-<section id="project" class="project"><div class="detail-photo" role="img" aria-label="Сочетание дубовой столешницы острова и окрашенного высокого шкафа"></div><div class="project-copy"><p class="overline">Проект кухни</p><h2>Тихий дом</h2><p>У окна — длинная рабочая поверхность. Напротив — остров, за которым можно готовить вдвоём. Высокий шкаф собрал запасы в одном месте, поэтому стену над мойкой удалось оставить открытой.</p><dl><div><dt>Планировка</dt><dd>Прямая с островом</dd></div><div><dt>Фасады</dt><dd>Дуб и оливковая эмаль</dd></div></dl><a href="#brief">Подобрать свою планировку ↓</a></div></section>
-<section id="brief" class="brief"><div class="brief-copy"><p class="overline">Задание мастеру</p><h2>А какая у вас кухня?</h2><p>Выберите планировку и укажите примерные размеры. Получится короткий файл, с которого удобно начать разговор о стоимости.</p><div class="plan" aria-hidden="true" data-layout="straight"><i></i><b></b><em></em></div></div>
-<form id="kitchen-form"><p class="picked">Фасад <strong id="picked">Натуральный дуб</strong> <a href="#fronts">Изменить</a></p>
+<section id="brief" class="brief"><div class="brief-copy"><p class="overline">Конструктор задания</p><h2>Ваша кухня в плане</h2><p>Введите размеры стен, выберите технику и сохраните лист для мастера. В нём останутся эскиз сверху и ваши пожелания.</p>
+<figure class="drawing" id="sketch"><div class="drawing-head"><span>Эскиз кухни</span><span>Вид сверху</span></div>
+<svg id="drawing" viewBox="0 0 460 246" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема выбранной планировки"></svg><figcaption id="plan-caption">Введите длину основной стены.</figcaption></figure></div>
+<form id="kitchen-form"><p id="origin" hidden></p><p class="picked">Фасад <strong id="picked">Натуральный дуб</strong> <a href="#fronts">Изменить</a></p>
 <label for="layout">Планировка</label><select id="layout"><option value="straight">Прямая</option><option value="corner">Угловая</option><option value="island">Прямая с островом</option></select>
 <label for="length">Длина основной стены, см</label><input id="length" type="number" inputmode="numeric" required min="1" max="9999" step="1" placeholder="Например, 360">
 <div id="extra-field" hidden><label for="extra" id="extra-label">Длина второй стены, см</label><input type="number" id="extra" min="1" max="9999" step="1" inputmode="numeric"></div>
+<fieldset class="equipment"><legend>Какую технику встроить?</legend>
+<label><input type="checkbox" name="equipment" value="Духовой шкаф">Духовой шкаф</label>
+<label><input type="checkbox" name="equipment" value="Посудомоечная машина">Посудомоечная машина</label>
+<label><input type="checkbox" name="equipment" value="Холодильник">Холодильник</label></fieldset>
 <label for="notes">Что ещё учесть? <small>По желанию</small></label><textarea id="notes" maxlength="1500" rows="2" placeholder="Например, оставить место для кофемашины"></textarea>
-<button type="submit">Скачать задание <span aria-hidden="true">↓</span></button><small>Текстовый файл. Введённые данные остаются в браузере.</small><p id="status" role="status"></p></form></section></main>
-<footer><a class="mark" href="#main">слой<span>.</span></a><p>Концепт мебельной мастерской от <a href="https://yzotop.github.io/null-studio/#sloy">студии null</a>.<br>Интерьер и образцы фасадов — визуализации.</p></footer></body></html>
+<a class="see-plan" href="#sketch">Посмотреть эскиз ↑</a><div class="exports"><button type="submit" value="sheet">Сохранить эскиз и задание ↓</button><button type="submit" class="text-export" value="text">Скачать задание в TXT</button></div><small>Лист с эскизом открывается в браузере и подходит для печати. Эскиз показывает форму кухни. Расположение техники и размеры для изготовления мастер уточнит на замере.</small><p id="status" role="status"></p></form></section></main>
+<footer><a class="mark" href="#main">слой<span>.</span></a><p>Концепт мебельной мастерской от <a href="https://yzotop.github.io/null-studio/#sloy">студии null</a>.<br>Интерьеры и образцы фасадов — визуализации.</p></footer></body></html>

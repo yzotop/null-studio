@@ -1,37 +1,44 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Аналитическая студия Александра Давыдова · null</title><meta name="description" content="Аналитическая студия Александра Давыдова. Разбор экономики товаров, сверка обращений с CRM и два примера с исходными данными."><link rel="stylesheet" href="style.css"></head><body><nav aria-label="Основное меню"><a class="brand" href="index.html" aria-label="Студия null, главная">null<span>аналитическая студия</span></a><div><a href="#cases">Работы</a><a href="#approach">Подход</a><a href="#contact">Контакт</a></div></nav><main><header class="studio-intro">
-  <h1>Аналитика для закупок и продаж</h1>
-  <div class="studio-lead">
-    <p>Я Александр Давыдов, аналитик студии null. Помогаю продавцам разобраться в экономике товаров, а руководителям продаж — проследить путь обращения до сделки.</p>
-    <div class="actions"><a class="button" href="#contact">Обсудить задачу</a><a href="#cases">Посмотреть работы</a></div>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Аналитическая студия Александра Давыдова · null</title><meta name="description" content="Аналитическая студия Александра Давыдова. Разбор экономики товаров, сверка обращений с CRM и два примера с исходными данными."><link rel="stylesheet" href="style.css?v=3"></head><body class="home"><nav aria-label="Основное меню"><a class="brand" href="index.html" aria-label="Студия null, главная">null<span>аналитическая студия</span></a><div><a href="#cases">Работы</a><a href="#approach">Подход</a><a href="#contact">Контакт</a></div></nav><main><header class="studio-intro">
+  <div class="hero-copy">
+    <h1>Аналитика для закупок и продаж</h1>
+    <p>Я Александр Давыдов. Помогаю продавцам разобраться в экономике товаров, а руководителям продаж — проследить путь обращения до сделки.</p>
+    <div class="actions"><a class="button" href="#cases">Посмотреть работы</a><a href="#contact">Обсудить задачу</a></div>
   </div>
+  <img class="hero-art" src="studio-still-life.webp" width="960" height="960" fetchpriority="high" alt="Синий рюкзак и оранжевая телефонная трубка">
 </header>
 
 <section id="cases" class="portfolio">
-  <header class="section-head"><h2>Два примера работы</h2><p>Модельные данные за октябрь 2026 года. В каждом разборе можно открыть исходные строки и повторить расчёт.</p></header>
-  <div class="portfolio-grid">
-    <article>
+  <header class="section-head">
+    <h2>Выбранные работы</h2>
+    <p>Два разбора на модельных данных за октябрь 2026 года. В каждом можно открыть исходные строки и повторить расчёт.</p>
+  </header>
+  <article class="work work-goods">
+    <div class="work-copy">
       <p class="case-domain">Wildberries</p>
       <h3><a href="wildberries.html">Какой товар проверить перед поставкой?</a></h3>
-      <figure class="sample goods">
-        <figcaption>Рюкзак «Город»</figcaption>
-        <dl><div><dt>Выручка после возвратов</dt><dd>46 700 ₽</dd></div>
-        <div><dt>После удержаний, доставки и себестоимости</dt><dd>−6 377,30 ₽</dd></div></dl>
-      </figure>
-      <p>Рюкзак лидирует по выручке, но покупатели вернули его девять раз. У сумки выручка ниже, а результат за месяц положительный. Сравните три товара и разберите один возврат по операциям.</p>
+      <p>Рюкзак лидирует по выручке, но девять возвратов обошлись магазину в доставку в обе стороны. Сравните его с сумкой и разберите один возврат по операциям.</p>
       <a class="case-link" href="wildberries.html">Разобрать экономику товара</a>
-    </article>
-    <article>
+    </div>
+    <figure class="sample goods">
+      <figcaption>Результат по товару, ₽</figcaption>
+      <div class="bar-row"><div><span>Рюкзак «Город»</span><strong>−6 377,30</strong></div><div class="bar-track"><i class="loss"></i></div></div>
+      <div class="bar-row"><div><span>Сумка «Почтальон»</span><strong>+11 278</strong></div><div class="bar-track"><i class="gain"></i></div></div>
+      <p>После удержаний, доставки и себестоимости</p>
+    </figure>
+  </article>
+  <article class="work work-sales">
+    <div class="work-copy">
       <p class="case-domain">Сайт, телефония и CRM</p>
       <h3><a href="funnel.html">Какие обращения обсудить на планёрке?</a></h3>
-      <figure class="sample calls">
-        <figcaption>Входящий звонок № 476577894</figcaption>
-        <dl><div><dt>Длительность разговора</dt><dd>5 мин 43 с</dd></div>
-        <div><dt>Связанная сделка в выгрузке CRM</dt><dd>Не найдена</dd></div></dl>
-      </figure>
       <p>У 12 обращений есть номер заявки или звонка, по которому менеджер может проверить итог. Ещё по четырём пропущенным вызовам стоит уточнить, перезвонили ли клиенту.</p>
       <a class="case-link" href="funnel.html">Открыть список обращений</a>
-    </article>
-  </div>
+    </div>
+    <figure class="sample calls">
+      <figcaption>Входящий звонок № 476577894</figcaption>
+      <dl><div><dt>Длительность разговора</dt><dd>5 мин 43 с</dd></div>
+      <div><dt>Связанная сделка в выгрузке CRM</dt><dd>Не найдена</dd></div></dl>
+    </figure>
+  </article>
 </section>
 
 <section id="approach" class="approach">

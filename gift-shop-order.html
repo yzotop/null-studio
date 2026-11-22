@@ -24,11 +24,19 @@
 <label>Правило <select id="policy"><option value="proportional">Сократить весь заказ</option><option value="bags">Сначала купить сумки</option></select></label></div>
 <p id="budget-error" role="status" hidden>Введите сумму от 0 до 45 585 200 ₽ с точностью до копейки.</p>
 <div id="order-result"><p class="formula" id="order-summary" aria-live="polite"></p><p id="basket-count"></p>
+<h3>Два заказа на одном бюджете</h3>
+<div class="scroll" tabindex="0" aria-label="Сравнение заказов"><table style="table-layout:fixed"><thead><tr><th scope="col">Показатель</th><th scope="col">Сократить весь заказ</th><th scope="col">Сначала купить сумки</th></tr></thead><tbody id="order-comparison"></tbody></table></div>
+<h3>Какие покупки меняются при выборе правила</h3>
+<p>Если повторятся такие покупки, одни корзины удастся собрать целиком только при первом правиле, другие — только при втором. В примерах показаны позиции, которых не хватило бы при одном из заказов.</p>
+<p id="basket-switches" aria-live="polite"></p>
+<div id="receipt-examples"></div>
+<h3>Ведомость по выбранному правилу</h3>
 <details><summary>Открыть все 30 строк заказа</summary><div class="scroll" tabindex="0"><table><thead><tr>
 <th>Товар</th><th>Артикул</th><th>Единица</th><th>Цена</th><th>Заявка</th><th>Заказать</th><th>Сокращение</th><th>Сумма</th>
 </tr></thead><tbody id="order-lines"></tbody></table></div></details>
 <details><summary id="explanation-title">Пояснение к заказу</summary><p id="explanation"></p><small id="explanation-source"></small></details></div>
-<p><a href="replenishment/replay.json" download>Скачать расчёт для лимита 1 млн ₽ · JSON</a></p></section>
+<p><a href="replenishment/replay.json" download>Скачать расчёт для лимита 1 млн ₽ · JSON</a></p>
+<p><a href="https://davydov.my/ai-first/workshop/inventory/#results">Полный эксперимент и результаты по месяцам</a></p></section>
 <section id="contact" class="order"><h2>Собрать заказ для вашего магазина</h2>
 <p>Пришлите последнюю заявку поставщику, продажи, остатки, цены и список того, что уже едет на склад. Начнём с одной группы товаров. Уточним, когда придёт машина и сколько штук в коробке. Если важны товары, которые берут вместе, понадобятся ещё и чеки.</p>
 <p>Я передам ведомость в Excel или Google Sheets. Проверим её на вашем ближайшем заказе. Вы меняете бюджет, видите новые количества и сверяете итог с лимитом. Если непонятно, почему урезали строку, AI покажет на её цифрах, сколько штук убрали и сколько денег это освободило.</p>
@@ -38,7 +46,7 @@
 <script defer src="replenishment/order.js"></script>
 <script defer src="replenishment/client-prices.js"></script>
 <script defer src="replenishment/client-examples.js"></script>
-<script defer src="replenishment/basket-input.js"></script>
-<script defer src="replenishment/basket-replay.js"></script>
-<script defer src="replenishment/worksheet.js"></script>
+<script defer src="replenishment/basket-input.js?v=2"></script>
+<script defer src="replenishment/basket-replay.js?v=2"></script>
+<script defer src="replenishment/worksheet.js?v=2"></script>
 </main><script>document.querySelectorAll('select').forEach(s=>s.addEventListener('change',()=>{s.closest('section').querySelectorAll('[data-panel]').forEach(e=>e.hidden=e.dataset.panel!==s.value)}));</script></body></html>
